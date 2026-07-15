@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp Mail API</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="glass-nav">
+        <h1 id="nav-brand" class="brand">API</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+            <li><a href="/api/status" target="_blank">Status</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <div class="card glass">
+            <h2>Your Temporary Email</h2>
+            <div class="input-group">
+                <input type="text" id="email-display" readonly placeholder="Generating...">
+                <button class="btn-gradient" onclick="copyEmail()">Copy Email</button>
+            </div>
+            <div class="actions">
+                <button class="btn-outline" onclick="generateNew()">Generate Random</button>
+                <button class="btn-outline" onclick="generateCustom()">Custom Username</button>
+                <button class="btn-outline" onclick="fetchInbox()">Refresh Inbox</button>
+                <button class="btn-danger" onclick="clearInbox()">Delete Inbox</button>
+            </div>
+        </div>
+
+        <div class="card glass otp-card" id="otp-section" style="display:none;">
+            <h3>Latest OTP Detected</h3>
+            <h1 id="otp-display">---</h1>
+            <button class="btn-gradient" onclick="copyOTP()">Copy OTP</button>
+        </div>
+
+        <div class="card glass inbox-card">
+            <h3>Latest Messages <span id="msg-count">(0)</span></h3>
+            <div id="inbox-list" class="inbox-list">
+                <p style="text-align:center; color:#888;">No messages yet.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="glass-footer">
+        <p><span id="foot-name">API</span> by <span id="foot-dev">Dev</span> | Telegram: <span id="foot-tg">@tg</span></p>
+        <p>Version <span id="foot-ver">1.0</span> | &copy; 2026</p>
+    </footer>
+
+    <div id="toast" class="toast">Copied to clipboard!</div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
