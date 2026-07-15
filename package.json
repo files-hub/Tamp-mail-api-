@@ -1,0 +1,13 @@
+{
+  "name": "temp-mail-api",
+  "version": "1.0.0",
+  "description": "Auto Random Domain Temp Mail API",
+  "main": "api/status.js",
+  "scripts": {
+    "start": "npx vercel dev"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=18.x"
+  }
+}
