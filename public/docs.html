@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="glass-nav">
+        <h1 id="nav-brand" class="brand">API</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="docs.html">Documentation</a></li>
+            <li><a href="/api/status" target="_blank">Status</a></li>
+        </ul>
+    </nav>
+
+    <div class="container docs-container">
+        <div class="card glass">
+            <h2>Endpoints</h2>
+            
+            <div class="endpoint">
+                <h3><span class="method get">GET</span> /api/new</h3>
+                <p>Generates a new random temporary email.</p>
+                <code>/api/new?username=optional</code>
+                <button class="btn-outline" onclick="window.open('/api/new', '_blank')">Try API</button>
+            </div>
+
+            <div class="endpoint">
+                <h3><span class="method get">GET</span> /api/inbox</h3>
+                <p>Fetch all messages for a specific token.</p>
+                <code>/api/inbox?token=YOUR_TOKEN</code>
+            </div>
+
+            <div class="endpoint">
+                <h3><span class="method get">GET</span> /api/message</h3>
+                <p>Read a specific message and auto-detect OTPs.</p>
+                <code>/api/message?id=MSG_ID&token=YOUR_TOKEN</code>
+            </div>
+
+            <div class="endpoint">
+                <h3><span class="method delete">DELETE</span> /api/delete-all</h3>
+                <p>Clears the entire inbox for a token.</p>
+                <code>/api/delete-all?token=YOUR_TOKEN</code>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
